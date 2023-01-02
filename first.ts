@@ -28,3 +28,20 @@ const arr3: number[] = [123, 456];
 //길이가 고정된 배열, 튜플
 const arr4: [number, number, string] = [123, 456, "hello"];
 const arr2: Array<number> = [123, 456];
+
+try {
+  const array: string[] = [];
+  array.push("hello");
+} catch (error) {
+  error;
+}
+
+// 최대한 ! 대신 if를 쓸 것, 오타 및 불완전한 상황에 대해 대비가 가능
+const head = document.querySelector("#head")!;
+console.log(head);
+
+const head = document.querySelector("#head");
+if (head) {
+  head.innerHTML = "hello world";
+  console.log(head);
+}
