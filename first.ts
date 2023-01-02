@@ -16,6 +16,9 @@ interface ADD {
 type Add = (x: number, y: number) => number;
 const plus: (x: number, y: number) => number = (x, y) => x + y; //타입을 지워도 완벽한 자바스크립트 코드여야 한다.
 
+let aa = 123;
+aa = "hello" as unknown as number; //앞의 타입을 강제로 바꿔줌
+
 const ff: true = true;
 const gg: 5 = 5;
 
