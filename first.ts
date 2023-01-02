@@ -45,3 +45,29 @@ if (head) {
   head.innerHTML = "hello world";
   console.log(head);
 }
+
+//소문자 string 사용!
+const a: string = "hello";
+const b: String = "hell";
+
+//템플릿 리터럴 타입이 존재(유니언 등 사용 가능)
+type World = "world" | "hell";
+const a: World = "world";
+
+const b = `hello ${a}`;
+// type Greeting = "hello world"
+type Greeting = `hello ${World}`;
+const c: Greeting = "hell";
+
+//배열
+let arr: string[] = [];
+let arr2: Array<string> = [];
+function rest(a, ...args: string[]) {
+  console.log(a, args); // 1,2,3,
+}
+rest("1", "2", "3");
+
+//튜플
+const tuple: [string, number] = ["1", 1];
+tuple[2] = "hello";
+tuple.push("hello");
